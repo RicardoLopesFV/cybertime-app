@@ -1,10 +1,30 @@
+import { useState } from "react";
 import { useTimer } from "react-timer-hook";
-import { Container, Timer, Buttons, Message } from "./styles";
+import { Container, Options, Timer, Buttons, Message } from "./styles";
 import * as S from "./styles";
 
+type TimerMode = "pomodoro" | "shortBreak" | "longBreak";
+
+const TIMER_CONFIGS = {
+  pomodoro: 25,
+  shortBreak: 5,
+  longBreak: 15,
+} as const;
+
+const TIMER_LABELS = {
+  pomodoro: "Pomodoro",
+  shortBreak: "Short Break",
+  longBreak: "Long Break",
+} as const;
+
 export function PomodoroTimer() {
-  const time = new Date();
-  time.setSeconds(time.getSeconds() + 25 * 60); // 25 minutes
+  const [currentMode, setCurrentMode] = useState<TimerMode>("pomodoro");
+
+  const createTimeStamp = (mode: TimerMode) => {
+    const time = new Date();
+    time.setSeconds(time.getSeconds() + TIMER_CONFIGS[mode] * 60);
+    return time;
+  }
 
   const {
     seconds,
@@ -14,16 +34,15 @@ export function PomodoroTimer() {
     resume,
     restart,
   } = useTimer({
-    expiryTimestamp: time,
-    onExpire: () => console.warn("Pomodoro finished!"),
+    expiryTimestamp: createTimeStamp(currentMode),
+    onExpire: () => console.warn(`${TIMER_LABELS[currentMode]} finished!`),
     autoStart: false,
   });
 
-    // Função resetar o timer
+  // Função resetar o timer
   const handleReset = () => {
-    const newTime = new Date();
-    newTime.setSeconds(newTime.getSeconds() + 25 * 60);
-    restart(newTime, false); // false = não inicia automaticamente
+    const newTime = createTimeStamp(currentMode);
+    restart(newTime, false);
   };
 
   // Função start/pause
@@ -35,8 +54,54 @@ export function PomodoroTimer() {
     }
   };
 
+  // Função para mudar a opção selecionada
+  const handleOptionClick = (mode: TimerMode) => {
+    if (!isRunning) {
+      setCurrentMode(mode);
+      const newTime = createTimeStamp(mode);
+      restart(newTime, false);
+    }
+  }
+
+  const getMessage = () => {
+    if (isRunning) {
+      switch (currentMode) {
+        case "pomodoro":
+          return "Stay focused!";
+        case "shortBreak":
+          return "Take a short break!";
+        case "longBreak":
+          return "Enjoy your long break!";
+        default:
+          return "Stay focused!";
+      }
+    } else {
+      return "Are you ready to focus?";
+    }
+  }
+
   return (
     <Container>
+        <Options>
+          <li
+            onClick={() => handleOptionClick("pomodoro")}
+            style={ { cursor: isRunning ? "not-allowed" : "pointer" } }
+          >
+            Pomodoro
+          </li>
+          <li
+            onClick={() => handleOptionClick("shortBreak")}
+            style={ { cursor: isRunning ? "not-allowed" : "pointer" } }
+          >
+            Short Break
+          </li>
+          <li
+            onClick={() => handleOptionClick("longBreak")}
+            style={ { cursor: isRunning ? "not-allowed" : "pointer" } }
+          >
+            Long Break
+          </li>
+        </Options>
       <Timer>
         <span>{minutes}</span>
         <span>:</span>
@@ -52,7 +117,7 @@ export function PomodoroTimer() {
           Reset
         </S.Button>
       </Buttons>
-      <Message>{isRunning ? 'Stay focused!' : 'Are you ready to focus?'}</Message>
+      <Message>{getMessage()}</Message>
     </Container>
   )
 }

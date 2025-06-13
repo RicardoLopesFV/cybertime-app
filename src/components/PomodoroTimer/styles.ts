@@ -5,13 +5,39 @@ interface ButtonProps {
 }
 
 export const Container = styled.div`
-  height: 100%;
+  max-width: 512px;
   width: 100%;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  border: 1px solid #2A2D3A;
+`
+
+export const Options = styled.ul`
+  width: 100%;
+  margin-bottom: 2rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    font-size: 1.2rem;
+    list-style: none;
+    color: ${({ theme }) => theme.neonGreen};
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      text-shadow:
+                  0 0 5px ${({ theme }) => theme.neonGreen},
+                  0 0 10px ${({ theme }) => theme.neonGreen},
+                  0 0 20px ${({ theme }) => theme.neonGreen};
+      transform: scale(1.05);
+    }
+  }
 `
 
 export const Timer = styled.div`

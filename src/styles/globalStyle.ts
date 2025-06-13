@@ -20,6 +20,9 @@ export const GlobalStyle = createGlobalStyle`
 
   main {
     height: calc(100vh - 13%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   button {
