@@ -41,7 +41,6 @@ export const Options = styled.ul`
 `
 
 export const Timer = styled.div`
-  user-select: none;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
@@ -57,7 +56,6 @@ export const Timer = styled.div`
 ` 
 
 export const Buttons = styled.div`
-  user-select: none;
   width: 100%;
   margin-bottom: 2rem;
   display: flex;

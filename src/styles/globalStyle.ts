@@ -18,6 +18,10 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 
+  h1, ul, button, span {
+    user-select: none;
+  }
+
   main {
     height: calc(100vh - 13%);
     display: flex;
@@ -28,7 +32,6 @@ export const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     background: none;
-    cursor: pointer;
   }
 
 `
