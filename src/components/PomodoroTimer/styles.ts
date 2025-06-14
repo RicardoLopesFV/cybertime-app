@@ -60,11 +60,35 @@ export const Timer = styled.div`
   justify-content: center;
   gap: 1rem;
   color: ${({ theme }) => theme.neonPink};
-
+  
   span {
     font-size: 5rem;
     font-family: 'Orbitron', sans-serif;
     color: ${({ theme }) => theme.neonPink};
+    text-shadow:
+      0 0 8px rgba(255, 20, 147, 0.6),
+      0 0 15px rgba(255, 20, 147, 0.4),
+      0 0 25px rgba(255, 20, 147, 0.2);
+    animation: cyberpunk-glow 4s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.3));
+  }
+
+  @keyframes cyberpunk-glow {
+    from {
+      text-shadow:
+        0 0 5px rgba(255, 20, 147, 0.8),
+        0 0 10px rgba(255, 20, 147, 0.5),
+        0 0 20px rgba(255, 20, 147, 0.3);
+      filter: drop-shadow(0 0 8px rgba(255, 20, 147, 0.3));
+    }
+    to {
+      text-shadow:
+        0 0 8px rgba(255, 20, 147, 0.9),
+        0 0 15px rgba(255, 20, 147, 0.6),
+        0 0 25px rgba(255, 20, 147, 0.4),
+        0 0 35px rgba(255, 20, 147, 0.2);
+      filter: drop-shadow(0 0 12px rgba(255, 20, 147, 0.4));
+    }
   }
 
   @media (min-width: ${breakpoints.mobile}) and (max-width: ${breakpoints.tablet}) {
