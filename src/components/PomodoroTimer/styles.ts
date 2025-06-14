@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+const breakpoints = {
+  mobile: "320px",
+  tablet: "768px",
+  desktop: "1024px",
+  desktopL: "1440px",
+}
+
 interface ButtonProps {
   $variant: "start" | "reset"
 }
@@ -38,6 +45,12 @@ export const Options = styled.ul`
       transform: scale(1.05);
     }
   }
+
+  @media (min-width: ${breakpoints.mobile}) and (max-width: ${breakpoints.tablet}) {
+    li {
+      font-size: 0.9rem;
+    }
+  }
 `
 
 export const Timer = styled.div`
@@ -52,6 +65,12 @@ export const Timer = styled.div`
     font-size: 5rem;
     font-family: 'Orbitron', sans-serif;
     color: ${({ theme }) => theme.neonPink};
+  }
+
+  @media (min-width: ${breakpoints.mobile}) and (max-width: ${breakpoints.tablet}) {
+    span {
+      font-size: 4rem;
+    }
   }
 ` 
 
@@ -82,6 +101,10 @@ export const Button = styled.button<ButtonProps>`
 
   border-radius: 8px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media (min-width: ${breakpoints.mobile}) and (max-width: ${breakpoints.tablet}) {
+    font-size: 1.2rem;
+  }
   
   &:hover {
     background: ${({ theme, $variant }) => 
@@ -98,4 +121,8 @@ export const Message = styled.p`
   color: ${({ theme }) => theme.textPrimary};
   font-size: 1.1rem;
   letter-spacing: 1px;
+
+  @media (min-width: ${breakpoints.mobile}) and (max-width: ${breakpoints.tablet}) {
+    font-size: 0.9rem;
+  }
 `

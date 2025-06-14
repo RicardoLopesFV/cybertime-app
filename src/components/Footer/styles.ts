@@ -1,5 +1,12 @@
 import styled from "styled-components"
 
+const breakpoints = {
+  mobile: "320px",
+  tablet: "768px",
+  desktop: "1024px",
+  desktopL: "1440px",
+}
+
 export const Container = styled.div`
   width: 100%;
   padding: 1rem;
@@ -13,6 +20,10 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 0.3rem;
+  }
+
+  @media (min-width: ${breakpoints.mobile}) and (max-width: ${breakpoints.tablet}) {
+    font-size: 0.8rem;
   }
 `
 

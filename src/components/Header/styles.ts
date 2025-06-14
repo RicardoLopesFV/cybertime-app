@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  height: calc(100vh / 20);
   width: 100%;
   border-bottom: 1px solid #2A2D3A;
 `
