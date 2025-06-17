@@ -20,7 +20,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  border: 1px solid #2A2D3A;
 `
 
 export const Options = styled.ul`
@@ -32,6 +31,7 @@ export const Options = styled.ul`
 
   li {
     font-size: 1.2rem;
+    letter-spacing: 1px;
     list-style: none;
     color: ${({ theme }) => theme.neonGreen};
     cursor: pointer;
@@ -47,6 +47,8 @@ export const Options = styled.ul`
   }
 
   @media (min-width: ${breakpoints.mobile}) and (max-width: ${breakpoints.tablet}) {
+    justify-content: space-around;
+
     li {
       font-size: 0.9rem;
     }
@@ -54,6 +56,7 @@ export const Options = styled.ul`
 `
 
 export const Timer = styled.div`
+  width: 100%;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
@@ -65,6 +68,7 @@ export const Timer = styled.div`
     font-size: 5rem;
     font-family: 'Orbitron', sans-serif;
     color: ${({ theme }) => theme.neonPink};
+    letter-spacing: 1px;
     text-shadow:
       0 0 8px rgba(255, 20, 147, 0.6),
       0 0 15px rgba(255, 20, 147, 0.4),
