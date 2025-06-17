@@ -1,5 +1,4 @@
-import { Title } from "./styles"
-import { Container } from "./styles"
+import { Container, Title } from "./styles"
 import * as S from "./styles"
 
 export function Header() {

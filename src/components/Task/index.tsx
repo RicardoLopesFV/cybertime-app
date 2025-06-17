@@ -9,7 +9,7 @@ export const Task: React.FC = () => {
       <Input
         type="text"
         value={taskName}
-        placeholder="What are you going to focus now?"
+        placeholder="Type here your task that you want to focus on..."
         onChange={(e) => setTaskName(e.target.value)}
         spellCheck={false}
         autoComplete="off"
