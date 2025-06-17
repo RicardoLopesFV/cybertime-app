@@ -36,10 +36,10 @@ export const Input = styled.input`
   }
 
   @media (max-width: ${breakpoints.tablet}) {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   @media (max-width: ${breakpoints.mobileLarge}) {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 `;
