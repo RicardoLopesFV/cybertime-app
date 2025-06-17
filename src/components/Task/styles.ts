@@ -10,7 +10,7 @@ const breakpoints = {
 
 export const Container = styled.div`
   width: 100%;
-  margin-bottom: 3rem;
+  margin-top: 3rem;
   text-align: center;
 `;
 
@@ -36,10 +36,10 @@ export const Input = styled.input`
   }
 
   @media (max-width: ${breakpoints.tablet}) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   @media (max-width: ${breakpoints.mobileLarge}) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `;

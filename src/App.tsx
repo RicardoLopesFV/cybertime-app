@@ -8,8 +8,8 @@ function App() {
     <>
       <Header />
       <main>
-        <Task />
         <PomodoroTimer />
+        <Task />
       </main>
       <Footer/>
     </>
