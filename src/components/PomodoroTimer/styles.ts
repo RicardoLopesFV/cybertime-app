@@ -32,6 +32,11 @@ export const Container = styled.div`
     width: 80%;
     padding: 2rem;
   }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 90%;
+    padding: 2rem 1rem;
+  }
 `
 
 export const Options = styled.ul`
