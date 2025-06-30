@@ -21,7 +21,7 @@ export const Title = styled.h2`
   font-size: 1.6rem;
 
   @media (max-width: ${breakpoints.mobile}) {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   `
@@ -31,7 +31,7 @@ export const SubTitle = styled.h3`
   font-size: 1.4rem;
 
   @media (max-width: ${breakpoints.mobile}) {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0 2.3rem;
   }
 `

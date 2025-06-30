@@ -60,16 +60,13 @@ export const Options = styled.ul`
 
   @media (max-width: ${breakpoints.tablet}) {
     li {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    justify-content: space-around;
-    gap: 1rem;
-
     li {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
 
@@ -168,7 +165,7 @@ export const Button = styled.button<ButtonProps>`
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0.8rem 1.5rem;
     border: 2px solid;
   }
@@ -180,11 +177,11 @@ export const Message = styled.p`
   letter-spacing: 1px;
   
   @media (max-width: ${breakpoints.tablet}){
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   @media (max-width: ${breakpoints.mobile}){
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
 `
