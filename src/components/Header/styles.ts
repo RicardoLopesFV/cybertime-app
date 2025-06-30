@@ -17,6 +17,6 @@ export const Title = styled.h1`
   font-weight: normal;
   letter-spacing: 2px;
   color: ${({ theme }) => theme.neonPink};
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-family: 'audiowide', sans-serif;
 `

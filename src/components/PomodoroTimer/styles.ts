@@ -49,7 +49,7 @@ export const Options = styled.ul`
     cursor: pointer;
     transition: all 0.3s ease;
 
-    &:hover {
+    &:hover:not(.disabled) {
       text-shadow:
                   0 0 5px ${({ theme }) => theme.neonGreen},
                   0 0 10px ${({ theme }) => theme.neonGreen},

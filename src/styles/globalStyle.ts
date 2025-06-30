@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     height: calc(100vh - 13%);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
   }
 

@@ -10,14 +10,14 @@ const breakpoints = {
 
 export const Container = styled.div`
   width: 100%;
-  margin-top: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
 `;
 
 export const Input = styled.input`
   width: 100%;
   padding: 0.5rem 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: transparent;
   border: none;
   color: ${({ theme }) => theme.neonPink};

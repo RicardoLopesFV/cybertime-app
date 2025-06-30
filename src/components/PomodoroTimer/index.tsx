@@ -85,19 +85,43 @@ export function PomodoroTimer() {
         <Options>
           <li
             onClick={() => handleOptionClick("pomodoro")}
-            style={ { cursor: isRunning ? "not-allowed" : "pointer" } }
+            style={
+              { 
+                cursor: isRunning ? "not-allowed" : "pointer",
+                color: isRunning ? "#555" : "#00F0AA",
+              } 
+            }
+            className={
+              `${currentMode === "pomodoro" ? "active" : ""} ${isRunning ? "disabled" : ""}`
+            }
           >
             Pomodoro
           </li>
           <li
             onClick={() => handleOptionClick("shortBreak")}
-            style={ { cursor: isRunning ? "not-allowed" : "pointer" } }
+            style={ 
+              { 
+                cursor: isRunning ? "not-allowed" : "pointer",
+                color: isRunning ? "#555" : "#00F0AA"
+              } 
+            }
+            className={
+              `${currentMode === "pomodoro" ? "active" : ""} ${isRunning ? "disabled" : ""}`
+            }
           >
             Short Break
           </li>
           <li
             onClick={() => handleOptionClick("longBreak")}
-            style={ { cursor: isRunning ? "not-allowed" : "pointer" } }
+            style={
+              {
+                cursor: isRunning ? "not-allowed" : "pointer",
+                color: isRunning ? "#555" : "#00F0AA"
+              }
+            }
+            className={
+              `${currentMode === "pomodoro" ? "active" : ""} ${isRunning ? "disabled" : ""}`
+            }
           >
             Long Break
           </li>
