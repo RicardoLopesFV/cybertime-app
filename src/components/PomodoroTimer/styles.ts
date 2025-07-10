@@ -35,7 +35,7 @@ export const Container = styled.div`
 
   @media (max-width: ${breakpoints.mobile}) {
     width: 90%;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 `
 
@@ -47,6 +47,7 @@ export const Options = styled.ul`
   justify-content: space-between;
 
   li {
+    font-weight: bold;
     font-size: 1.2rem;
     letter-spacing: 1px;
     list-style: none;
@@ -142,6 +143,7 @@ export const Buttons = styled.div`
 
 export const Button = styled.button<ButtonProps>`
   text-transform: uppercase;
+  font-weight: 500;
   font-size: 1.5rem;
   letter-spacing: 1px;
   padding: 1rem 2.5rem;

@@ -11,6 +11,7 @@ export const Container = styled.div`
   max-width: ${breakpoints.desktop};
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 2rem;
 `
 
 export const Title = styled.h2`

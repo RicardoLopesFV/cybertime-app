@@ -24,10 +24,10 @@ export const Title = styled.h1`
   font-weight: normal;
   letter-spacing: 2px;
   color: ${({ theme }) => theme.neonPink};
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: 'audiowide', sans-serif;
 
   @media (max-width: ${breakpoints.mobile}) {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 `

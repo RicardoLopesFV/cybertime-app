@@ -67,16 +67,16 @@ export function PomodoroTimer() {
     if (isRunning) {
       switch (currentMode) {
         case "pomodoro":
-          return "Stay focused!";
+          return "Continue focado!";
         case "shortBreak":
-          return "Take a short break!";
+          return "Hora de um intervalo curto!";
         case "longBreak":
-          return "Enjoy your long break!";
+          return "Hora de um intervalo longo!";
         default:
-          return "Stay focused!";
+          return "Continue focado!";
       }
     } else {
-      return "Are you ready to focus?";
+      return "Preparado pra focar?";
     }
   }
 

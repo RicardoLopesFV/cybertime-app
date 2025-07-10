@@ -11,20 +11,22 @@ export const Container = styled.div`
   width: 100%;
   padding: 1rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 3rem;
 
   p {
     display: flex;
     align-items: center;
     gap: 0.3rem;
   }
-
+  
   @media (min-width: ${breakpoints.mobile}) and (max-width: ${breakpoints.tablet}) {
     font-size: 0.8rem;
+    flex-direction: column;
+    gap: 1rem;
   }
+  
 `
 
 export const Footer = styled.footer`

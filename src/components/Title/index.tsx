@@ -5,7 +5,7 @@ export function Title() {
   return (
     <div>
       <S.Title>Cyberpunk Pomodoro Timer</S.Title>
-      <SubTitle>Enhance your productivity with a cyberpunk pomodoro timer</SubTitle>
+      <SubTitle>Melhore sua produtividade com um Pomodoro Cyberpunk</SubTitle>
     </div>
 
   )

@@ -24,6 +24,7 @@ export const GlobalStyle = createGlobalStyle`
 
   main {
     height: calc(100vh - 13%);
+    margin-bottom: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
