@@ -39,6 +39,6 @@ export const Input = styled.input`
   }
 
   @media (max-width: ${breakpoints.mobileLarge}) {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 `;
